@@ -24,8 +24,11 @@ OneR
 Id3   总裁
 J48
 
-LinearRegression
-LogisticRegression
+LinearRegression  吴
+LogisticRegression 吴
+MultiLayerPerceptron 吴
+SGD 吴
+
 
 Knn(IBk) 钱
 
@@ -56,9 +59,11 @@ Evaluation
 Apriori
 
 ## 影响性能速度的关键代码
-**StringToWordVector**
+**StringToWordVector** 吴
 
 ## Weka Python Wrapper
 
 ## References
  [1] http://quweiprotoss.blog.163.com/blog/#m=0&t=1&c=fks_087064082095085064093081086095080086089075086094094064, weka源码分析`网上流传的weka源码分析的原始出处`
+ 
+ [2] https://weka.wikispaces.com/Use+WEKA+in+your+Java+code, Use Weka in your Java code
