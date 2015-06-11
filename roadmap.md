@@ -21,11 +21,9 @@ Classifier
 ZeroR
 OneR
 
-Id3   总裁
-J48
+SimpleLogistic 修
 
 LinearRegression  吴
-LogisticRegression 吴
 MultiLayerPerceptron 吴
 SGD 吴
 
