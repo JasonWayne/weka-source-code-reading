@@ -13,7 +13,7 @@ Linear Regression是。。。。
 
 ## 算法重点
 ### SimpleLinearRegression
-$ f(n) = x * 2 $
+$$ f(n) = x * 2 $$
 ![text](images/linear_regression_alpha_beta.png)
 
 ```java
