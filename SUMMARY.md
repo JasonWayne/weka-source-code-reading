@@ -7,7 +7,7 @@
 * [Weka中的核心类](chapter2.md)
 	* [Instances类](chapter2/instances.md)
 	* [AbstractClassifier类](chapter2/abstract_classifier.md)
-	* [Evaluation类]()
+	* [Evaluation类](chapter2/evaluation.md)
 * [Weka中的算法](chapter3.md)
 	* [Linear Regression](chapter3/linear_regression.md)
 	* [Logistic Regression](chapter3/logistic_regression.md)
