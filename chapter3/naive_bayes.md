@@ -73,7 +73,7 @@ if ((m_Instances.numInstances() > 0)
 
 在计算概率时，离散值可以直接处理，而对于连续值，weka假设其符合正态分布函数
 
-* 首先计算p
+* 首先计算p,需要先计算其均值和标准差，之后可根据公式计算
 
 	$p = \frac{data- \mu}{\sigma}$
 	
