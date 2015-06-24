@@ -71,5 +71,48 @@ if ((m_Instances.numInstances() > 0)
 
 ```
 
+在计算概率时，离散值可以直接处理，而对于连续值，weka假设其符合正态分布函数
+
+* 首先计算p,需要先计算其均值和标准差，之后可根据公式计算
+
+	$p = \frac{data- \mu}{\sigma}$
+	
+* 然后计算其正态分布函数
+	
+	$namal(p) = \frac{1}{\sqrt{2\pi}}\int_{-inf}^pe^\frac{-t^2}{2}dt$
+
+
+```java
+  public double getProbability(double data) {
+
+    data = round(data);
+    double zLower = (data - m_Mean - (m_Precision / 2)) / m_StandardDev;
+    double zUpper = (data - m_Mean + (m_Precision / 2)) / m_StandardDev;
+
+    double pLower = Statistics.normalProbability(zLower);
+    double pUpper = Statistics.normalProbability(zUpper);
+    return pUpper - pLower;
+  }
+  
+  public static double normalProbability(double a) {
+
+    double x, y, z;
+
+    x = a * SQRTH;
+    z = Math.abs(x);
+
+    if (z < SQRTH) {
+      y = 0.5 + 0.5 * errorFunction(x);
+    } else {
+      y = 0.5 * errorFunctionComplemented(z);
+      if (x > 0) {
+        y = 1.0 - y;
+      }
+    }
+    return y;
+  }
+```
+
+
 ##tips
 * 在处理数据时，并不是在原始数据上进行处理，而是复制一份新的数据，在程序中使用
