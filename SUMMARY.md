@@ -12,7 +12,7 @@
 	* [Linear Regression](chapter3/linear_regression.md)
 	* [Logistic Regression](chapter3/logistic_regression.md)
 	* [Neural Network]()
-	* [Naive Bayes]()
+	* [Naive Bayes](chapter3/naive_bayes.md)
 	* [kNN]()
 	* [LWL]()
 	* [Adaboost]()
