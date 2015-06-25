@@ -16,13 +16,14 @@
 ![image](images/kmeans_data.png)
 
 需要输入的参数：
-displayStdDevs:输出中是否显示标准差。
-distanceFunction:选择计算距离的方法有ChebyshevDistance,EditDistance,EuclideanDistance,ManhattanDistance这四种方法可选。
-dontReplaceMissingValues:是否要替代空缺值。
-maxIterations:指定最大迭代次数。
-numClusters:指定族的数目。
-preserveInstancesOrder:集的实例是否必须保留下来。
-seed:初始总数。
+
+- displayStdDevs:输出中是否显示标准差。
+- distanceFunction:选择计算距离的方法有ChebyshevDistance,EditDistance,EuclideanDistance,ManhattanDistance这四种方法可选。
+- dontReplaceMissingValues:是否要替代空缺值。
+- maxIterations:指定最大迭代次数。
+- numClusters:指定族的数目。
+- preserveInstancesOrder:集的实例是否必须保留下来。
+- seed:初始总数。
 
 ![image](images/kmeans_parameters.png)
 
