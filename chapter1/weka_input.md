@@ -22,3 +22,43 @@ Weka希望用户以arff格式作为输入（现在也支持CSV和其他格式，
 2983,9365,5,0,1,230000
 ```
 ## 其他格式
+对于其他格式的文件，比如csv格式，Weka提供了方便的类进行转换，即将csv转化为arff格式后再进行使用，下面是Weka的官方中给出的转换的样例代码。
+
+```java
+
+import weka.core.Instances;
+import weka.core.converters.ArffSaver;
+import weka.core.converters.CSVLoader;
+ 
+import java.io.File;
+ 
+public class CSV2Arff {
+  /**
+   * takes 2 arguments:
+   * - CSV input file
+   * - ARFF output file
+   */
+  public static void main(String[] args) throws Exception {
+    if (args.length != 2) {
+      System.out.println("\nUsage: CSV2Arff <input.csv> <output.arff>\n");
+      System.exit(1);
+    }
+ 
+    // load CSV
+    CSVLoader loader = new CSVLoader();
+    loader.setSource(new File(args[0]));
+    Instances data = loader.getDataSet();
+ 
+    // save ARFF
+    ArffSaver saver = new ArffSaver();
+    saver.setInstances(data);
+    saver.setFile(new File(args[1]));
+    saver.setDestination(new File(args[1]));
+    saver.writeBatch();
+  }
+}
+```
+除此之外，在weka的图形界面中，也可进行方便地转换。
+
+## 参考资料
+[1] https://weka.wikispaces.com/Converting+CSV+to+ARFF
