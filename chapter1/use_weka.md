@@ -10,7 +10,7 @@ java -cp WEKA_INS/weka.jar weka.classifiers.functions.Logistic
 -T WEKA_INS/data/weather.numeric.arff 
 -d ./weather.numeric.model.arff
 ```
-其中，`WEKA_INS`为Weka的安装地址，`-t`用于设置训练集，`-T`设置测试集，这里分别用Weka自带的天气数据作为训练和测试集，`-d`？
+其中，`WEKA_INS`为Weka的安装地址，`-t`用于设置训练集，`-T`设置测试集，这里分别用Weka自带的天气数据作为训练和测试集。
 
 
 ##java调用

@@ -4,10 +4,10 @@
 ##算法流程
 Naive Bayes的一般计算方法如下：
 
-1. 设$x={a_1,a_2,...,a_m}$为一个待分类样本，而每个a为x的一个特征属性。
-2. 类别标签集合$C={y_1,y_2,...,y_n}$
-3. 计算$P(y_1|x),P(y_2|x),...,P(y_n|x),$
-4. 如果$P(y_k|x)=max{P(y_i|x)}$,则$x\in{y_k}$
+1. 设$$x={a_1,a_2,...,a_m}$$为一个待分类样本，而每个a为x的一个特征属性。
+2. 类别标签集合$$C={y_1,y_2,...,y_n}$$
+3. 计算$$P(y_1|x),P(y_2|x),...,P(y_n|x),$$
+4. 如果$$P(y_k|x)=max{P(y_i|x)}$,则$x\in{y_k}$$
 
 在计算条件概率时，根据bayes定理，有
 
@@ -46,7 +46,7 @@ if ((m_Instances.numInstances() > 0)
 ……
 }
 ```
-`distributionForInstance`函数进行的就是我们所知道的Naive Bayes的过程了。首先计算每一个分类的概率$P(Y)$即程序中的`probs`数组，temp为$P(x|y_i)$，并将`prob`更新为$P(y)*\prod{P(a|y_i)}$,之后取最大的来更新max值。
+`distributionForInstance`函数进行的就是我们所知道的Naive Bayes的过程了。首先计算每一个分类的概率$P(Y)$即程序中的`probs`数组，temp为$$P(x|y_i)$$，并将`prob`更新为$$P(y)*\prod{P(a|y_i)}$$,之后取最大的来更新max值。
 
 ```java
 
