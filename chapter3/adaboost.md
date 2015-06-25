@@ -158,7 +158,15 @@ public class AdaboostTest {
   }
 
 ```
-整个训练过程的逻辑还是非常清楚的，每一轮都会训练一个弱分类器，根据这个弱分类器的错分情况，调整下一次样本被采样的权重，这样让分类器关注于被错分的样本。同时，错误率还会决定每个分类器在最重的总分类器中的权重。我们再来看看总的分类器是如何去分类一个样本的。
+整个训练过程的逻辑还是非常清楚的，每一轮都会训练一个弱分类器，根据这个弱分类器的错分情况，调整下一次样本被采样的权重，这样让分类器关注于被错分的样本。同时，错误率还会决定每个分类器在最重的总分类器中的权重。最终的权重依据如下公式：$$\beta_k = \frac12ln\frac{1 - E_k}{E_k}$$
+
+```java
+    // 根据这一次训练的弱分类器的错误率，重新设置样本抽样的概率分布
+    double reweight = (1 - epsilon) / epsilon;
+    // 以及在最后的分类器中的权重
+    m_Betas[m_NumIterationsPerformed] = Math.log(reweight);
+```
+我们再来看看总的分类器是如何去分类一个样本的。
 
 ```java
   public double[] distributionForInstance(Instance instance) throws Exception {
