@@ -11,11 +11,11 @@ Naive Bayes的一般计算方法如下：
 
 在计算条件概率时，根据bayes定理，有
 
-$P(y_i|x)=\frac{P(x|y_i)*P(y_i)}{P(x)}$
+$$P(y_i|x)=\frac{P(x|y_i)*P(y_i)}{P(x)}$$
 
 因为分母对于所有类别为常数，各特征之间条件独立，所以我们可以得到
 
-$P(x|y_i)P(y_i)=P(a_1|y_i)P(a_2|y_i)...P(a_m|y_i)P(y_i)=P(y_i)\prod^m_{j=1}P(a_j|y_i)$
+$$P(x|y_i)P(y_i)=P(a_1|y_i)P(a_2|y_i)...P(a_m|y_i)P(y_i)=P(y_i)\prod^m_{j=1}P(a_j|y_i)$$
 ##程序流程
 在计算了一个`numPrecision`,这个值是在同一个属性上的数值不同，则相减得到值再都相加起来得到`deltaSum`，这样在最后将`deltaSum`除以数值不同的数量即`distinct` 得到`numPrecision`。在后面用作构建参数。
 
@@ -75,11 +75,11 @@ if ((m_Instances.numInstances() > 0)
 
 * 首先计算p,需要先计算其均值和标准差，之后可根据公式计算
 
-	$p = \frac{data- \mu}{\sigma}$
+	$$p = \frac{data- \mu}{\sigma}$$
 	
 * 然后计算其正态分布函数
 	
-	$namal(p) = \frac{1}{\sqrt{2\pi}}\int_{-inf}^pe^\frac{-t^2}{2}dt$
+	$$namal(p) = \frac{1}{\sqrt{2\pi}}\int_{-inf}^pe^\frac{-t^2}{2}dt$$
 
 
 ```java

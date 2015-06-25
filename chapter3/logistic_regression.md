@@ -20,12 +20,12 @@ eval.evaluateModel(m_classifier, newInstancesTest);
 ```
 ##logistic算法流程
 ###计算L
-$
+$$
 L = \\
 -\sum_{i=1}^n\sum_{j=1}^{k-1}(Y_{ij} * log(P_j(X_i)))\\
 +(1 - \sum_{j=1}^{k-1}Y_{ij})* log(1 - \sum_{j=1}^{k-1}P_j(X_i))\\
 + ridge * (B^2)
-$
+$$
 
 ```java
 protected double objectiveFunction(double[] x) {
@@ -129,7 +129,7 @@ for (int i = 0; i < nC; i++) {
 ###计算结果
 采用优化后参数值来计算最后的分布
 
-$P_j(X_i)= \frac{1}{1+\sum_{i=1}^{k-1}e^{X_i*B_j}}$
+$$P_j(X_i)= \frac{1}{1+\sum_{i=1}^{k-1}e^{X_i*B_j}}$$
 
 ```java
 private double[] evaluateProbability(double[] data) {
