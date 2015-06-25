@@ -18,7 +18,7 @@
 	* [Adaboost]()
 	* [Decision Tree]()
 	* [Apriori]()
-	* [KMeans]()
+	* [KMeans](chapter3/kmeans.md)
 	* [EM]()
 	* [PCA]()
 * [Weka中的工具类](chapter4.md)
