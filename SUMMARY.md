@@ -1,7 +1,7 @@
 # Summary
 
 * [Weka简介及使用样例展示](chapter1/chapter1.md)
-	* [Weka简介](chapter1/intro_weka.md)
+	* [Weka简介]()
 	* [使用Weka](chapter1/use_weka.md)
 	* [Weka的输入格式](chapter1/weka_input.md)
 * [Weka中的核心类](chapter2.md)
@@ -14,13 +14,8 @@
 	* [Neural Network]()
 	* [Naive Bayes](chapter3/naive_bayes.md)
 	* [kNN]()
-	* [LWL]()
-	* [Adaboost]()
+	* [Adaboost](chapter3/adaboost.md)
 	* [Decision Tree]()
-	* [Apriori]()
 	* [KMeans](chapter3/kmeans.md)
-	* [EM]()
-	* [PCA]()
 * [Weka中的工具类](chapter4.md)
-	* [StringToWordVector]()
 	* [Matrix](chapter4/matrix.md)
