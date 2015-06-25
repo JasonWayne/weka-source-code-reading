@@ -23,3 +23,4 @@
 	* [PCA]()
 * [Weka中的工具类](chapter4.md)
 	* [StringToWordVector]()
+	* [Matrix](chapter4/matrix.md)
