@@ -17,6 +17,6 @@
 	* [Adaboost](chapter3/adaboost.md)
 	* [Decision Tree]()
 	* [KMeans](chapter3/kmeans.md)
-	* [InfoGainEvaluation](chapter3/InfoGainAttributeEvaluation.md)
+	* [InfoGainEvaluation](chapter3/InfoGainAttributeEval.md)
 * [Weka中的工具类](chapter4.md)
 	* [Matrix](chapter4/matrix.md)
